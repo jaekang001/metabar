@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Table
   - BG
+  - PP
   layers:
   - Default
   - TransparentFX
@@ -14,12 +15,12 @@ TagManager:
   - Water
   - UI
   - Table
+  - 
+  - PP
+  - 
+  - 
+  - 
   - BG
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 
@@ -42,10 +43,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Table
-    uniqueID: 1963346069
-    locked: 0
-  - name: BG
-    uniqueID: 236677893
     locked: 0
