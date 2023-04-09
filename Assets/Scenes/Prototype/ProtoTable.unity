@@ -279,6 +279,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7489e29ae99ae3947877bd5cae35c969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &274142063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 274142065}
+  - component: {fileID: 274142064}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &274142064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274142063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521ea55a4532e7443808f04231bc6f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &274142065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274142063}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.105046384, y: -0.093051374, z: 2.9914358}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &626054768
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +714,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -100
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -973,7 +1017,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318241915}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: -2}
+  m_LocalPosition: {x: 1, y: 3, z: -2}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1045,10 +1089,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.65}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 1}
     oldSize: {x: 1, y: 3.33}
     newSize: {x: 1, y: 3.33}
     adaptiveTilingThreshold: 0.5
@@ -1070,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ef56b6da29b8e4c86ebd34357c03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneCtrl: {fileID: 274142064}
 --- !u!1 &1834122999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,7 +1142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834122999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 2, z: 0}
+  m_LocalPosition: {x: -1, y: 5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1169,10 +1214,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 1}
     oldSize: {x: 1, y: 3.33}
     newSize: {x: 1, y: 3.33}
     adaptiveTilingThreshold: 0.5
@@ -1194,6 +1239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ef56b6da29b8e4c86ebd34357c03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneCtrl: {fileID: 274142064}
 --- !u!1 &1865668357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,7 +1267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865668357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -1}
+  m_LocalPosition: {x: 0, y: 4, z: -1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1293,10 +1339,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 1}
     oldSize: {x: 1, y: 3.19}
     newSize: {x: 1, y: 3.19}
     adaptiveTilingThreshold: 0.5
@@ -1318,6 +1364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ef56b6da29b8e4c86ebd34357c03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneCtrl: {fileID: 274142064}
 --- !u!1 &2079890905
 GameObject:
   m_ObjectHideFlags: 0

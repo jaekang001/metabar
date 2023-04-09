@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-
-public class ProtoDrink : ProtoClickObject
+public class ProtoSceneCtrl : MonoBehaviour
 {
-    [SerializeField]
-    private ProtoSceneCtrl sceneCtrl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +18,12 @@ public class ProtoDrink : ProtoClickObject
         
     }
 
-    protected override void OnClick()
+    public void LoadScene(int number)
     {
-        base.OnClick();
-        sceneCtrl.LoadScene(3);
+        SceneManager.LoadScene(number);
+    }
+    public void LoadScene(string name)
+    {
+        SceneManager.LoadScene(name);
     }
 }
