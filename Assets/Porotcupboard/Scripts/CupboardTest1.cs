@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour
+public class CupboardTest1 : MonoBehaviour
 {
     // Start is called before the first frame update
     private bool state;
@@ -26,11 +26,12 @@ public class test : MonoBehaviour
 			//If something was hit, the RaycastHit2D.collider will not be null.
 			if (hit.collider != null)
 			{
-                if (hit.collider.tag == "item")
+                if (hit.collider.tag == "cupboard1")
                 {
                     if (state == false)
                     {
                         hit.collider.transform.GetChild(0).gameObject.SetActive(true);
+                        hit.collider.transform.GetChild(1).gameObject.SetActive(true);
                         selectCup = hit.collider.gameObject;
                         state = true;
                     }
@@ -39,12 +40,16 @@ public class test : MonoBehaviour
                         if (selectCup.gameObject == hit.collider.gameObject)
                         {
                             hit.collider.transform.GetChild(0).gameObject.SetActive(false);
+                            hit.collider.transform.GetChild(1).gameObject.SetActive(false);
+                            
                             state = false;
                         }
                         else
                         {
                             selectCup.transform.GetChild(0).gameObject.SetActive(false);
+                            selectCup.transform.GetChild(1).gameObject.SetActive(false);
                             hit.collider.transform.GetChild(0).gameObject.SetActive(true);
+                            hit.collider.transform.GetChild(1).gameObject.SetActive(true);
                             selectCup = hit.collider.gameObject;
                         }
                     }

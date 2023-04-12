@@ -6,6 +6,9 @@ TagManager:
   tags:
   - item
   - item1
+  - cupboard1
+  - cupboard2
+  - cupboard3
   layers:
   - Default
   - TransparentFX
