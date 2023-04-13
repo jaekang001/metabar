@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a612482e70f4046beb04ceb38a8a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeText: {fileID: 577677202}
 --- !u!4 &457225653
 Transform:
   m_ObjectHideFlags: 0
@@ -465,6 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 577677202}
   timeoverImage: {fileID: 514892372}
+  timeString: time
 --- !u!1 &588001574
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +724,7 @@ GameObject:
   - component: {fileID: 620417959}
   - component: {fileID: 620417958}
   - component: {fileID: 620417957}
+  - component: {fileID: 620417961}
   m_Layer: 5
   m_Name: menu text
   m_TagString: Untagged
@@ -831,6 +834,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620417955}
   m_CullTransparentMesh: 1
+--- !u!114 &620417961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620417955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c2957c9eb832d4f8f00a6d45274785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuizText: {fileID: 620417959}
 --- !u!1 &839948970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,6 +1461,7 @@ GameObject:
   - component: {fileID: 1647263070}
   - component: {fileID: 1647263069}
   - component: {fileID: 1647263068}
+  - component: {fileID: 1647263072}
   m_Layer: 5
   m_Name: menu text2
   m_TagString: Untagged
@@ -1554,6 +1571,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647263066}
   m_CullTransparentMesh: 1
+--- !u!114 &1647263072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647263066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c2957c9eb832d4f8f00a6d45274785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuizText: {fileID: 1647263070}
 --- !u!1 &1812375804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,6 +2034,7 @@ GameObject:
   - component: {fileID: 2003460513}
   - component: {fileID: 2003460512}
   - component: {fileID: 2003460511}
+  - component: {fileID: 2003460514}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2126,6 +2157,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003460509}
   m_CullTransparentMesh: 1
+--- !u!114 &2003460514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003460509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a612482e70f4046beb04ceb38a8a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeText: {fileID: 577677202}
 --- !u!1 &2079347165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2183,7 @@ GameObject:
   - component: {fileID: 2079347169}
   - component: {fileID: 2079347168}
   - component: {fileID: 2079347167}
+  - component: {fileID: 2079347171}
   m_Layer: 5
   m_Name: menu text3
   m_TagString: Untagged
@@ -2248,3 +2293,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079347165}
   m_CullTransparentMesh: 1
+--- !u!114 &2079347171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079347165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c2957c9eb832d4f8f00a6d45274785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuizText: {fileID: 2079347169}
