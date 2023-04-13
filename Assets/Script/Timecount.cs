@@ -12,13 +12,11 @@ public class Timecount : MonoBehaviour
     int seconds = 0;
     public string timeString;
     string value;
-    bool TimerOn;
 
     // Start is called before the first frame update
     void Start()
     {
         timeoverImage.SetActive(false);
-        TimerOn = false;
     }
 
     // Update is called once per frame
@@ -44,5 +42,6 @@ public class Timecount : MonoBehaviour
         PlayerPrefs.SetString(timeString, value);
         timeString = PlayerPrefs.GetString(timeString);
         timeText.text = "Time: " + timeString;
+        //PlayerPrefs를 이용한 timer저장값
     }
 }
