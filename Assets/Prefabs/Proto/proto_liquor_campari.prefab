@@ -124,4 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ef56b6da29b8e4c86ebd34357c03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstPoint: {x: 0, y: 0}
+  lastPoint: {x: 0, y: 0}
+  dragDistance: 1
   sceneCtrl: {fileID: 0}

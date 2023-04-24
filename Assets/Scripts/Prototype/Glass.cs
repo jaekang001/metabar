@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProtoJigger : MonoBehaviour
+public class Glass : MonoBehaviour
 {
     [SerializeField]
     private SpriteRenderer jiggerSprite = null;
@@ -33,8 +33,8 @@ public class ProtoJigger : MonoBehaviour
     public void inputDrop()
     {
         curCapacity += 0.5f;
-        if(curCapacity > maxCapacity)
+        if (curCapacity > maxCapacity)
             curCapacity = maxCapacity;
-        jiggerSprite.material.SetFloat("_Cutoff", curCapacity/maxCapacity);
+        jiggerSprite.material.SetFloat("_Cutoff1", curCapacity / maxCapacity);
     }
 }

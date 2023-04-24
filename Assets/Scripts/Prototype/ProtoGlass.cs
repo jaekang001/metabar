@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProtoGlass : ProtoClickObject
+public class ProtoGlass : ProtoTableObject
 {
     // Start is called before the first frame update
     void Start()

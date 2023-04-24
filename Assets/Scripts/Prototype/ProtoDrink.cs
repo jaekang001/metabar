@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class ProtoDrink : ProtoClickObject
+public class ProtoDrink : ProtoTableObject
 {
     [SerializeField]
     private ProtoSceneCtrl sceneCtrl;
