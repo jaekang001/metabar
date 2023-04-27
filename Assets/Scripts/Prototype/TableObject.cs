@@ -2,7 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProtoTableObject : ProtoClickObject
+public enum TableObjectType
+{
+    Ice,
+    Jigger,
+    Tool,
+    Glass,
+    Drink
+}
+
+public class TableObject : ProtoClickObject
 {
     [SerializeField]
     protected Vector2 firstPoint = Vector3.zero;
@@ -11,7 +20,15 @@ public class ProtoTableObject : ProtoClickObject
     [SerializeField]
     private float dragDistance = 1;
 
+    [SerializeField]
+    protected List<GameObject> colObjects = new List<GameObject>();
+
     protected IEnumerator myDrag;
+
+    [SerializeField]
+    private TableObjectType type;
+
+    public TableObjectType Type { get { return type; } }
 
     // Start is called before the first frame update
     void Start()
@@ -89,5 +106,20 @@ public class ProtoTableObject : ProtoClickObject
             }
             yield return null;
         }
+    }
+
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        colObjects.Add(collision.gameObject);
+    }
+
+    protected void OnCollisionStay2D(Collision2D collision)
+    {
+        
+    }
+
+    protected void OnCollisionExit2D(Collision2D collision)
+    {
+        colObjects.Remove(collision.gameObject);
     }
 }

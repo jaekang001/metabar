@@ -2,23 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProtoDrinkDrop : MonoBehaviour
+public class DrinkDrop : MonoBehaviour
 {
     [SerializeField]
     private GameObject dropPrefab;
     [SerializeField]
     private Transform dropPoint;
+    [SerializeField]
+    DrinkName name = DrinkName.Vodka;
 
     float temp = 0;
     [SerializeField]
     private bool isTilted = false;
 
-    // Start is called before the first frame update
-    void Start()
+    public DrinkName Name { get { return name; } }  
+    void Save()
     {
+
+    }
+
+
+    void Load()
+    {
+        int temp = 0;
+        try
+        {
+            temp = PlayerPrefs.GetInt("DrinkName");
+            
+        }
+        catch
+        {
+            
+        }
+        name = (DrinkName)temp;
+
         
     }
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        Load();
+    }
+
+    private void OnDestroy()
+    {
+        Save();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -45,6 +75,11 @@ public class ProtoDrinkDrop : MonoBehaviour
         {
             isTilted = false;   
         }
+
+    }
+
+    private void SpriteImageChange()
+    {
 
     }
 

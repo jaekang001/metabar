@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TechnicType { Build, Float };
 public class GlassCol : MonoBehaviour
 {
     [SerializeField]
     private Glass glass = null;
+    [SerializeField]
+    private TechnicType type;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +25,13 @@ public class GlassCol : MonoBehaviour
     {
         if (collision.tag == "Drop")
         {
-            GameObject.Destroy(collision.gameObject);
-            glass.inputDrop();
+            Drop drop = collision.GetComponent<Drop>();
+
+            
+            if(type == TechnicType.Build)
+                glass.Build(drop);
+            else if (type == TechnicType.Float)
+                glass.Float(drop);
         }
     }
 

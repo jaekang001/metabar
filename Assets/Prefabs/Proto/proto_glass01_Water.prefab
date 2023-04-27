@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b54736320d52d7846b0507fba902ad9c, type: 2}
+  - {fileID: 2100000, guid: 8cd0d93b1d24961449f9c7fd33eea014, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,9 +109,9 @@ GameObject:
   - component: {fileID: 5822437848196508283}
   - component: {fileID: 5822437848196508282}
   - component: {fileID: 5822437848196508277}
-  - component: {fileID: 2342867813846223089}
+  - component: {fileID: -5647023844054734954}
   m_Layer: 0
-  m_Name: proto_glass01
+  m_Name: proto_glass01_Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5822437848196508281}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.24980041, w: 0.9682974}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 10}
   m_ConstrainProportionsScale: 0
@@ -132,7 +132,7 @@ Transform:
   - {fileID: 1111150914363794336}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.931}
 --- !u!212 &5822437848196508283
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   dragDistance: 1
   colObjects: []
   type: 3
---- !u!50 &2342867813846223089
+--- !u!50 &-5647023844054734954
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

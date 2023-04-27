@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProtoTool : ProtoTableObject
+public class TableGlass : TableObject
 {
     // Start is called before the first frame update
     void Start()
@@ -15,8 +15,10 @@ public class ProtoTool : ProtoTableObject
     {
         
     }
+
     protected override void OnClick()
     {
         base.OnClick();
-    }   
+
+    }
 }
