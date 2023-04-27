@@ -618,6 +618,7 @@ GameObject:
   - component: {fileID: 991683784}
   - component: {fileID: 991683783}
   - component: {fileID: 991683782}
+  - component: {fileID: 991683787}
   m_Layer: 5
   m_Name: Time Count
   m_TagString: Untagged
@@ -727,6 +728,19 @@ RectTransform:
   m_AnchoredPosition: {x: -431.04996, y: -189.04001}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &991683787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991683781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0305f051efc3c4ea74f99b1dbff8f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 5279837637994771107, guid: 8af118e393eaae148be2d4c7b86acd68, type: 3}
 --- !u!1 &1104137028
 GameObject:
   m_ObjectHideFlags: 0

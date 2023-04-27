@@ -6,12 +6,10 @@ using UnityEngine.UI;
 
 public class SceneCtrl : MonoBehaviour
 {
-    public Text timeText;
-    Timecount timecount;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -22,6 +20,6 @@ public class SceneCtrl : MonoBehaviour
     public void ChangeScene()
     {
         SceneManager.LoadScene("ProtoCounter2");
-        timeText.text = "Time: " + PlayerPrefs.GetString(timecount.timeString);
+     
     }
 }

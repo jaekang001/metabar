@@ -5,43 +5,47 @@ using UnityEngine.UI;
 
 public class Timecount : MonoBehaviour
 {
-    public Text timeText;
     public GameObject timeoverImage;
-    private float timeElapsed = 0.0f;
-    int minutes = 0;
-    int seconds = 0;
-    public string timeString;
-    string value;
-
+    public float timeLeft = 420.0f; // 7분 타이머를 설정합니다.
+    public Text timer;
+    int minutes;
+    int seconds;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
         timeoverImage.SetActive(false);
+        float savedTime = PlayerPrefs.GetFloat("TimeLeft"); // 저장된 타이머 값을 불러옵니다.
+        if (savedTime > 0)
+        {
+            timeLeft = savedTime; // 불러온 타이머 값을 사용합니다.
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        SetValue();
-        if (minutes==1)
+        if (timeLeft > 0)
         {
+            timeLeft -= Time.deltaTime; // 타이머 값을 감소시킵니다.
+        } // 시간을 감소시킵니다.
+        minutes = Mathf.FloorToInt(timeLeft / 60.0f); // 분을 계산합니다.
+        seconds = Mathf.FloorToInt(timeLeft % 60.0f); // 초를 계산합니다.
+
+        
+        timer.text = "Time:" + string.Format("{0:00}:{1:00}", minutes, seconds);
+        if (timeLeft < 0)
+        {
+            // 타이머를 멈춥니다.
+            timeLeft = 0;
             timeoverImage.SetActive(true);
-            timeElapsed = 0.0f;
+
         }
+        PlayerPrefs.SetFloat("TimeLeft", timeLeft);
     }
 
-   
-
-    public void SetValue()
-    {
-        timeElapsed += Time.deltaTime;
-        minutes = Mathf.FloorToInt(timeElapsed / 60.0f);
-        seconds = Mathf.FloorToInt(timeElapsed % 60.0f);
-        value = string.Format("{0:00}:{1:00}", minutes, seconds);
-        PlayerPrefs.SetString(timeString, value);
-        timeString = PlayerPrefs.GetString(timeString);
-        timeText.text = "Time: " + timeString;
-        //PlayerPrefs를 이용한 timer저장값
-    }
 }
