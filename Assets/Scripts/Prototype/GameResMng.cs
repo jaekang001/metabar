@@ -16,7 +16,8 @@ public class GameResMng : MonoBehaviour
     List<Sprite> sprites = new List<Sprite>();
 
     private Dictionary<DrinkName,Color> drinkColor = new Dictionary<DrinkName,Color>();
-    // Start is called before the first frame update
+    
+    private Dictionary<DrinkName,float> drinkWeight = new Dictionary<DrinkName,float>();
 
     private static GameResMng instance;
 
@@ -33,6 +34,9 @@ public class GameResMng : MonoBehaviour
             drinkColor.Add(DrinkName.Gin, new Color(1f, 1f, 1f));
             drinkColor.Add(DrinkName.SweetVermouth, new Color(1f, 0.5f, 0.2f));
             drinkColor.Add(DrinkName.Campari, new Color(1f, 0.3f, 0.1f));
+            drinkWeight.Add(DrinkName.Gin, 3);
+            drinkWeight.Add(DrinkName.SweetVermouth, 1);
+            drinkWeight.Add(DrinkName.Campari, 5);
         }
     }
     void Start()
@@ -51,6 +55,11 @@ public class GameResMng : MonoBehaviour
         return drinkColor[name];
     }
 
+    public float GetDrinkWeightByDrinkName(DrinkName name)
+    {
+        return drinkWeight[name];
+    }
+
     public string GetSpriteNameByDrinkName(DrinkName drinkName)
     {
         switch(drinkName)
@@ -64,6 +73,21 @@ public class GameResMng : MonoBehaviour
         }
         return null;
     }
+
+    public DrinkName GetDrinkNameBySpriteName(string spriteName)
+    {
+        switch (spriteName)
+        {
+            case "proto_Spirits_gin":
+                return DrinkName.Gin;
+            case "proto_liquor_sweet_vermouth":
+                return DrinkName.SweetVermouth;
+            case "proto_liquor_campari":
+                return DrinkName.Campari;
+        }
+        return DrinkName.Gin;
+    }
+    
 
     /// <summary>
     /// 이름으로 스프라이트 찾아서 반환

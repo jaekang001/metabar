@@ -1144,9 +1144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef1fd0ab9ae5f546bf3664fab7d4142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jiggerSprite: {fileID: 272119225}
-  curCapacity: 0
-  maxCapacity: 50
+  liquidSprite: {fileID: 272119225}
+  capacity: 50
 --- !u!1 &1227865055
 GameObject:
   m_ObjectHideFlags: 0

@@ -228,6 +228,8 @@ MonoBehaviour:
   dragDistance: 1
   colObjects: []
   type: 3
+  liquidSprite: {fileID: 8079999726658489312}
+  capacity: 50
 --- !u!50 &-5647023844054734954
 Rigidbody2D:
   serializedVersion: 4
