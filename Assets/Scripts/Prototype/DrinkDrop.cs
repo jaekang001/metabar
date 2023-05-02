@@ -62,7 +62,7 @@ public class DrinkDrop : MonoBehaviour
             temp += 1f * Time.deltaTime;
             if (temp > dropScale * 0.05f)
             {
-                Instantiate(dropPrefab, dropPoint.position + new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), 0), Quaternion.identity);
+                Instantiate(dropPrefab, dropPoint.position + new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), 0), Quaternion.identity).GetComponent<Drop>().Init(name);
                 temp = 0;
             }
         }

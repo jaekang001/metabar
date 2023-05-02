@@ -561,7 +561,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1227865056}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &546270219
 GameObject:
@@ -874,6 +874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977783799}
   - component: {fileID: 977783798}
+  - component: {fileID: 977783800}
   m_Layer: 0
   m_Name: GameCtrl
   m_TagString: Untagged
@@ -908,6 +909,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &977783800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977783797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924b9c0aea6c7584f98907bbb16ccc1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 156c006d416e0cb408cb35d37f9bc48d, type: 3}
+  - {fileID: 21300000, guid: d522cbff2f1bf214492915271bc6ed4a, type: 3}
+  - {fileID: 21300000, guid: 7cd62786c4c124f499d8fdb8c2c969d3, type: 3}
 --- !u!1 &988268781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,6 +1157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1227865056}
   - component: {fileID: 1227865057}
+  - component: {fileID: 1227865058}
   m_Layer: 0
   m_Name: Drink
   m_TagString: Untagged
@@ -1159,8 +1177,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1989414223}
   - {fileID: 526467437}
+  - {fileID: 1989414223}
   m_Father: {fileID: 565791276}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1180,6 +1198,20 @@ MonoBehaviour:
   dropPoint: {fileID: 526467437}
   name: 0
   isTilted: 0
+--- !u!114 &1227865058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227865055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376e1d94a19404545857ca7d5e9abf31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1989414224}
+  name: 0
 --- !u!1 &1282990780
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,7 +2216,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1227865056}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1989414224
 SpriteRenderer:

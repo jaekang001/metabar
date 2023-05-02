@@ -102,6 +102,12 @@ public class Drop : MonoBehaviour
     [SerializeField]
     DrinkType type = DrinkType.Distilled;
 
+    [SerializeField]
+    Color color = new Color(0, 0, 0);
+
+    [SerializeField]
+    SpriteRenderer spriteRen = null;
+
     /// <summary>
     /// 주류의 도수
     /// </summary>
@@ -142,6 +148,8 @@ public class Drop : MonoBehaviour
     {
         this.name = name;
         this.type = WhatIsDrinkType(name);
+        this.color = GameResMng.Instance.GetDrinkColorByDrinkName(name);
+        spriteRen.color = this.color;
     }
 
     /// <summary>
@@ -205,6 +213,7 @@ public class Drop : MonoBehaviour
     {
         return 0;
     }
+
 
 
 }
