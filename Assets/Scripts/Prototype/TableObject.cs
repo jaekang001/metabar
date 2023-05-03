@@ -45,12 +45,12 @@ public class TableObject : ProtoClickObject
     protected override void OnClick()
     {
         base.OnClick();
-        Debug.Log("On Click");
+        //Debug.Log("On Click");
     }
 
     protected virtual void OnDrop()
     {
-        Debug.Log("On Drop");
+        //Debug.Log("On Drop");
     }
 
     protected override void OnEnter()
@@ -72,7 +72,7 @@ public class TableObject : ProtoClickObject
             {
                 myDrag = Dragging();
                 StartCoroutine(myDrag);
-                Debug.Log("WaitClick Stop");
+                //Debug.Log("WaitClick Stop");
                 StopCoroutine(myWait);
             }
             yield return null;
@@ -88,7 +88,7 @@ public class TableObject : ProtoClickObject
         {
             lastPoint = GetMousePosition();
             transform.localPosition = posOrgn + (lastPoint - firstPoint);
-            Debug.Log("Is Dragging");
+            //Debug.Log("Is Dragging");
             if (Input.GetMouseButtonUp(0))
             {
                 float dis = Vector2.Distance(firstPoint, lastPoint);
@@ -100,7 +100,7 @@ public class TableObject : ProtoClickObject
                 {
                     OnClick();
                 }
-                Debug.Log("Dragging Stop");
+                //Debug.Log("Dragging Stop");
                 transform.localPosition = posOrgn;
                 StopCoroutine(myDrag);
             }

@@ -23,12 +23,12 @@ public class ProtoClickObject : MonoBehaviour
 
     protected virtual void OnClick()
     {
-        Debug.Log(gameObject.name);
+        //Debug.Log(gameObject.name);
     }
 
     protected virtual void OnEnter()
     {
-        Debug.Log("OnMouseEnter");
+        //Debug.Log("OnMouseEnter");
         myWait = WaitClick();
         StartCoroutine(myWait);
     }
@@ -41,7 +41,7 @@ public class ProtoClickObject : MonoBehaviour
 
     protected virtual void OnExit()
     {
-        Debug.Log("OnMouseExit");
+        //Debug.Log("OnMouseExit");
         StopCoroutine(myWait);
     }
 

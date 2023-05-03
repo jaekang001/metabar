@@ -33,7 +33,7 @@ public class GameResMng : MonoBehaviour
             instance = this;
             drinkColor.Add(DrinkName.Gin, new Color(1f, 1f, 1f));
             drinkColor.Add(DrinkName.SweetVermouth, new Color(1f, 0.5f, 0.2f));
-            drinkColor.Add(DrinkName.Campari, new Color(1f, 0.3f, 0.1f));
+            drinkColor.Add(DrinkName.Campari, new Color(0.2f, 0.5f, 1f));
             drinkWeight.Add(DrinkName.Gin, 3);
             drinkWeight.Add(DrinkName.SweetVermouth, 1);
             drinkWeight.Add(DrinkName.Campari, 5);

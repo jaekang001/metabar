@@ -58,7 +58,7 @@ public class DrinkDrop : MonoBehaviour
             float slope = Mathf.Abs(curAngle - 180)/180;
             float dropScale = 0.6f * 2f * Mathf.Pow(2f * 9.81f * slope , 0.5f);
             
-            Debug.Log("curAngle="+ curAngle + " dropScale=" + dropScale + " slope=" + slope);
+            //Debug.Log("curAngle="+ curAngle + " dropScale=" + dropScale + " slope=" + slope);
             temp += 1f * Time.deltaTime;
             if (temp > dropScale * 0.05f)
             {
