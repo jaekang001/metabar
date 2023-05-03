@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/// <summary>
+/// 칵테일잔 컴포넌트
+/// </summary>
 public class Glass : MonoBehaviour
 {
     protected List<Liquid> liquidList = new List<Liquid>();
@@ -145,6 +148,9 @@ public class Glass : MonoBehaviour
     }
 }
 
+/// <summary>
+/// 액체 정보 클래스
+/// </summary>
 public class Liquid
 {
     private float amount = 0;
