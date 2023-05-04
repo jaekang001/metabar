@@ -8,21 +8,22 @@ TagManager:
   - BG
   - PP
   - BG2
+  - jiin
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - jiin
   - Water
   - UI
   - Table
-  - jin
+  - 
   - PP
   - 
   - 
   - 
   - BG
-  - 
+  - jin
   - 
   - 
   - 
@@ -47,4 +48,13 @@ TagManager:
     locked: 0
   - name: jin
     uniqueID: 625176985
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 91712931
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 3423680649
+    locked: 0
+  - name: jiin
+    uniqueID: 326001777
     locked: 0
