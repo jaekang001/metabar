@@ -21,6 +21,6 @@ public class SceneCtrl2 : MonoBehaviour
     }
     public void ChangeScene()
     {
-        SceneManager.LoadScene("ProtoCounter");
+        SceneManager.LoadScene(4);
     }
 }

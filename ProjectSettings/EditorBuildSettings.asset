@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype/protoCounter2.unity
     guid: e20d4fc9e0ea7dc46829baf4e9e007ce
+  - enabled: 1
+    path: Assets/Scenes/Prototype/FristScene.unity
+    guid: 6c96dc611bd2aa444b2d9d61e5ab193f
+  - enabled: 1
+    path: Assets/Scenes/Prototype/ExampleScene.unity
+    guid: 99a4b51b7e6eb3048b34235d40f5e5fa
   m_configObjects: {}
