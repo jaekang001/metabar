@@ -25,7 +25,7 @@ public class ProtoTable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ToolSet(new int[] { 0,1});
+        ToolSet(new int[] { 0, 1 , 2});
         GlassSet(0);
         DrinkSet(new int[] { 0, 1 ,2});
     }
@@ -42,7 +42,7 @@ public class ProtoTable : MonoBehaviour
         foreach (int toolID in toolIDs) {
 
             Instantiate(this.tools[toolID], pos, Quaternion.identity, toolPoint);
-            pos += new Vector3(0,-2,-1);
+            pos += new Vector3(0,-2, -1 );
 
         }
     }

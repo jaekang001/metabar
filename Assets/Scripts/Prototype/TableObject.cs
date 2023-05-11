@@ -6,6 +6,7 @@ public enum TableObjectType
 {
     Ice,
     Jigger,
+    Barspoon,
     Tool,
     Glass,
     Drink
@@ -14,9 +15,9 @@ public enum TableObjectType
 public class TableObject : ProtoClickObject
 {
     [SerializeField]
-    protected Vector2 firstPoint = Vector3.zero;
+    protected Vector2 firstPoint = Vector2.zero;
     [SerializeField]
-    protected Vector2 lastPoint = Vector3.zero;
+    protected Vector2 lastPoint = Vector2.zero;
     [SerializeField]
     private float dragDistance = 1;
 
@@ -81,13 +82,13 @@ public class TableObject : ProtoClickObject
 
     protected IEnumerator Dragging()
     {
-        Vector2 posOrgn = transform.localPosition;
+        Vector3 posOrgn = transform.localPosition;
         firstPoint = GetMousePosition();
 
         while (true)
         {
             lastPoint = GetMousePosition();
-            transform.localPosition = posOrgn + (lastPoint - firstPoint);
+            transform.localPosition = posOrgn + (Vector3)(lastPoint - firstPoint);
             //Debug.Log("Is Dragging");
             if (Input.GetMouseButtonUp(0))
             {

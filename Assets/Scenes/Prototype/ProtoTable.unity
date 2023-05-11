@@ -252,6 +252,7 @@ MonoBehaviour:
   tools:
   - {fileID: 1800396728955951949, guid: c7e897981e5480343a2762f508884f54, type: 3}
   - {fileID: 8586399539794042423, guid: 6c6a5e48a11ea8446bcdff4db9fcfc44, type: 3}
+  - {fileID: 3741779564143588506, guid: bdb7481819295af4f822d8fb96f92404, type: 3}
   glasses:
   - {fileID: 5822437848196508281, guid: 83430ec9c25ab9644ab06270f99e22d5, type: 3}
   - {fileID: 2266337979509444177, guid: bbec105921113924785c1ce1105885c6, type: 3}
@@ -399,7 +400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103993059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 20, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

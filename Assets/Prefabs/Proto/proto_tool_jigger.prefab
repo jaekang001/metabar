@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3efb736c6f5edbf4db59abfd01af99e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -111,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5293585924300284516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0133, y: 0.2512, z: 0}
+  m_LocalPosition: {x: -0.0133, y: 0.2512, z: 1}
   m_LocalScale: {x: 0.2950364, y: 0.40987164, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -158,7 +158,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 116322b1a240bff48885523a54eae100, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a39a03172fcbd498081e26d02e96ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jigger: {fileID: 0}
+  jigger: {fileID: 5137888215895825980}
 --- !u!1 &8586399539794042423
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,9 +224,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8586399539794042422}
   - component: {fileID: 8586399539794042420}
-  - component: {fileID: 8586399539794042419}
   - component: {fileID: 5137888215895825980}
   - component: {fileID: 5750637838384338502}
+  - component: {fileID: -2947204946353509134}
   m_Layer: 0
   m_Name: proto_tool_jigger
   m_TagString: Untagged
@@ -277,23 +277,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1.17}
   m_EdgeRadius: 0
---- !u!114 &8586399539794042419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8586399539794042423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7489e29ae99ae3947877bd5cae35c969, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstPoint: {x: 0, y: 0}
-  lastPoint: {x: 0, y: 0}
-  dragDistance: 1
-  colObjects: []
-  type: 1
 --- !u!114 &5137888215895825980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,3 +313,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &-2947204946353509134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586399539794042423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83639b7c71b057e4c95019208d15b4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPoint: {x: 0, y: 0}
+  lastPoint: {x: 0, y: 0}
+  dragDistance: 1
+  colObjects: []
+  type: 1
