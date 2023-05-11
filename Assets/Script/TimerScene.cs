@@ -13,7 +13,7 @@ public class TimerScene : MonoBehaviour
     void Start()
     {
         timerText = GetComponent<Text>(); // 자신의 UI Text 오브젝트를 참조합니다.
-        float savedTime = PlayerPrefs.GetFloat("TimeLeft"); // 저장된 타이머 값을 불러옵니다.
+        float savedTime = PlayerPrefs.GetFloat("Time"); // 저장된 타이머 값을 불러옵니다.
         if (savedTime > 0)
         {
             timer.timeLeft = savedTime; // 불러온 타이머 값을 사용합니다.
@@ -34,7 +34,8 @@ public class TimerScene : MonoBehaviour
         {
             timerText.text = "Time: " + string.Format("{0:00}:{1:00}", minutes, seconds); ; // 타이머 값을 UI Text에 표시합니다.
         }
-        PlayerPrefs.SetFloat("TimeLeft",timer.timeLeft);
+        PlayerPrefs.SetFloat("Time",timer.timeLeft);
+     
     }
 }
 

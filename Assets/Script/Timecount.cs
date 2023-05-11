@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timecount : MonoBehaviour
 {
     public GameObject timeoverImage;
-    public float timeLeft = 420.0f; // 7분 타이머를 설정합니다.
+    public float timeLeft=0.0f; // 7분 타이머를 설정합니다.
     public Text timer;
     int minutes;
     int seconds;
@@ -17,8 +17,9 @@ public class Timecount : MonoBehaviour
     }
     void Start()
     {
+        timeLeft = 420.0f;
         timeoverImage.SetActive(false);
-        float savedTime = PlayerPrefs.GetFloat("TimeLeft"); // 저장된 타이머 값을 불러옵니다.
+        float savedTime = PlayerPrefs.GetFloat("Time"); // 저장된 타이머 값을 불러옵니다.
         if (savedTime > 0)
         {
             timeLeft = savedTime; // 불러온 타이머 값을 사용합니다.
@@ -45,7 +46,8 @@ public class Timecount : MonoBehaviour
             timeoverImage.SetActive(true);
 
         }
-        PlayerPrefs.SetFloat("TimeLeft", timeLeft);
+        PlayerPrefs.SetFloat("Time", timeLeft);
+        
     }
 
 }

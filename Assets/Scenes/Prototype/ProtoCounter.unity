@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &343574497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 343574499}
+  - component: {fileID: 343574498}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &343574498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343574497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412ff3dbffa5b6447aa7bfad952b85e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 798050335}
+--- !u!4 &343574499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343574497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.074622, y: 5.355773, z: -0.03129234}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358959272
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +859,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ceb60f6ddaf13c647a34550956f4bbec, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -847,7 +892,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c2957c9eb832d4f8f00a6d45274785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuizText: {fileID: 620417959}
+  name1: {fileID: 620417959}
+  name2: {fileID: 1647263070}
+  name3: {fileID: 2079347169}
 --- !u!1 &775663587
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,9 +979,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2007207873}
+      - m_Target: {fileID: 2007207875}
         m_TargetAssemblyTypeName: Restartbutton, Assembly-CSharp
         m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2007207875}
+        m_TargetAssemblyTypeName: Restartbutton, Assembly-CSharp
+        m_MethodName: Timereset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -982,6 +1041,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775663587}
   m_CullTransparentMesh: 1
+--- !u!114 &798050335 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5279837637994771107, guid: 8af118e393eaae148be2d4c7b86acd68, type: 3}
+  m_PrefabInstance: {fileID: 5279837637484795191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946224ab60ea5824c9e1b07c4a80c388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &839948970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,7 +1756,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ceb60f6ddaf13c647a34550956f4bbec, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1719,7 +1789,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c2957c9eb832d4f8f00a6d45274785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuizText: {fileID: 1647263070}
+  name1: {fileID: 620417959}
+  name2: {fileID: 1647263070}
+  name3: {fileID: 2079347169}
 --- !u!1 &1812375804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,7 +2386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2007207874}
-  - component: {fileID: 2007207873}
+  - component: {fileID: 2007207875}
   m_Layer: 0
   m_Name: Click2
   m_TagString: Untagged
@@ -2322,18 +2394,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2007207873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007207872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4c80cba0e4427f4e8da189731c6bc79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2007207874
 Transform:
   m_ObjectHideFlags: 0
@@ -2349,6 +2409,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2007207875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007207872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c80cba0e4427f4e8da189731c6bc79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 798050335}
 --- !u!1 &2079347165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,7 +2524,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ceb60f6ddaf13c647a34550956f4bbec, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2484,7 +2557,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c2957c9eb832d4f8f00a6d45274785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuizText: {fileID: 2079347169}
+  name1: {fileID: 620417959}
+  name2: {fileID: 1647263070}
+  name3: {fileID: 2079347169}
 --- !u!1001 &5279837637484795191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2493,9 +2568,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1440790158}
     m_Modifications:
     - target: {fileID: 5279837637994771107, guid: 8af118e393eaae148be2d4c7b86acd68, type: 3}
+      propertyPath: timeLeft
+      value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279837637994771107, guid: 8af118e393eaae148be2d4c7b86acd68, type: 3}
       propertyPath: timeoverImage
       value: 
       objectReference: {fileID: 514892372}
+    - target: {fileID: 5279837637994771109, guid: 8af118e393eaae148be2d4c7b86acd68, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: ceb60f6ddaf13c647a34550956f4bbec, type: 3}
     - target: {fileID: 5279837637994771128, guid: 8af118e393eaae148be2d4c7b86acd68, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

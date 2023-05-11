@@ -21,6 +21,6 @@ public class SceneCtrl2 : MonoBehaviour
     }
     public void ChangeScene()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(1);
     }
 }

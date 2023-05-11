@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Restartbutton : MonoBehaviour
+public class TimeReset : MonoBehaviour
 {
     public Timecount timer;
     // Start is called before the first frame update
@@ -21,16 +20,10 @@ public class Restartbutton : MonoBehaviour
     {
         
     }
-    public void ChangeScene()
-    {
-        SceneManager.LoadScene("ExampleScene");
-       
-    }
     public void Timereset()
     {
         PlayerPrefs.DeleteAll();
         timer.timeLeft *= 0.0f;
-        
+        Debug.Log("1");
     }
-
 }
