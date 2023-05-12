@@ -10,10 +10,22 @@ using UnityEngine;
 public class GameResMng : MonoBehaviour
 {
     /// <summary>
-    /// 스프라이트 등록 리스트
+    /// 임시 스프라이트 등록 리스트
     /// </summary>
     [SerializeField]
     List<Sprite> sprites = new List<Sprite>();
+
+    /// <summary>
+    /// 논알콜 스프라이트 리스트
+    /// </summary>
+    [SerializeField]
+    List<Sprite> nonalcoholicSprites = new List<Sprite>();
+
+    /// <summary>
+    /// 유리잔 스프라이트 리스트
+    /// </summary>
+    [SerializeField]
+    List<Sprite> glassSprites = new List<Sprite>();
 
     private Dictionary<DrinkName,Color> drinkColor = new Dictionary<DrinkName,Color>();
     
@@ -28,6 +40,12 @@ public class GameResMng : MonoBehaviour
 
     private void Awake()
     {
+        nonalcoholicSprites.Clear();
+        glassSprites.Clear();
+
+        nonalcoholicSprites.AddRange( Resources.LoadAll<Sprite>("Textures/NonAlcoholic/"));
+        glassSprites.AddRange(Resources.LoadAll<Sprite>("Textures/Glasses/"));
+
         if(instance == null)
         {
             instance = this;
