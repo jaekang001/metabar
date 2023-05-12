@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Prototype/ProtoCounter.unity
     guid: b34979a7138e22643a944d346afd41fb
@@ -18,12 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Prototype/ProtoCupboard.unity
     guid: e1d5ac7436268b64f8d16dfcb46eab93
   - enabled: 1
-    path: Assets/Scenes/Prototype/ProtoJigger.unity
-    guid: 5ce7e8bd473f3024aa4c974bd48eec00
-  - enabled: 1
-    path: Assets/Scenes/Prototype/Floating.unity
+    path: Assets/Scenes/Prototype/PouringScene.unity
     guid: 6fb49b7969ae48849a1bf93b7fd2c572
-  - enabled: 1
-    path: Assets/Scenes/Prototype/Building.unity
-    guid: c7817e77affd99242a93e9c8d430f788
   m_configObjects: {}

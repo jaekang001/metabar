@@ -95,35 +95,35 @@ public class Drop : MonoBehaviour
     /// 주류의 이름
     /// </summary>
     [SerializeField]
-    DrinkName name = DrinkName.Vodka;
+    private DrinkName drinkName = DrinkName.Vodka;
     /// <summary>
     /// 주류의 타입
     /// </summary>
     [SerializeField]
-    DrinkType type = DrinkType.Distilled;
+    private DrinkType type = DrinkType.Distilled;
 
     [SerializeField]
-    Color color = new Color(0, 0, 0);
+    private Color color = new Color(0, 0, 0);
 
     [SerializeField]
-    SpriteRenderer spriteRen = null;
+    private SpriteRenderer spriteRen = null;
 
     /// <summary>
     /// 주류의 도수
     /// </summary>
     [SerializeField]
-    int proof = 0;
+    private int proof = 0;
 
     /// <summary>
     /// 주류의 무게
     /// </summary>
     [SerializeField]
-    int weight = 0;
+    private int weight = 0;
 
     /// <summary>
     /// 주류의 이름 반환
     /// </summary>
-    public DrinkName Name { get { return name; } }
+    public DrinkName Name { get { return drinkName; } }
     /// <summary>
     /// 주류의 타입 반환
     /// </summary>
@@ -144,11 +144,11 @@ public class Drop : MonoBehaviour
     /// 물방울 필드 초기화 메서드
     /// </summary>
     /// <param name="name">물방울의 주류 이름</param>
-    public void Init(DrinkName name)
+    public void Init(DrinkName drinkName)
     {
-        this.name = name;
-        this.type = WhatIsDrinkType(name);
-        this.color = GameResMng.Instance.GetDrinkColorByDrinkName(name);
+        this.drinkName = drinkName;
+        this.type = WhatIsDrinkType(drinkName);
+        this.color = GameResMng.Instance.GetDrinkColorByDrinkName(drinkName);
         spriteRen.color = this.color;
     }
 
@@ -157,37 +157,37 @@ public class Drop : MonoBehaviour
     /// </summary>
     /// <param name="name"></param>
     /// <returns></returns>
-    public DrinkType WhatIsDrinkType(DrinkName name)
+    public DrinkType WhatIsDrinkType(DrinkName drinkName)
     {
-        if (name >= DrinkName.Vodka && name <= DrinkName.ScotchWhisky)
+        if (drinkName >= DrinkName.Vodka && drinkName <= DrinkName.ScotchWhisky)
         {
             return DrinkType.Distilled;
         }
-        else if (name >= DrinkName.CremeDeMentheWhite && name <= DrinkName.Galliano)
+        else if (drinkName >= DrinkName.CremeDeMentheWhite && drinkName <= DrinkName.Galliano)
         {
             return DrinkType.Compounded;
         }
-        else if (name >= DrinkName.GamHongRo && name <= DrinkName.SunwoonsanBokbunjaWine)
+        else if (drinkName >= DrinkName.GamHongRo && drinkName <= DrinkName.SunwoonsanBokbunjaWine)
         {
             return DrinkType.Traditional;
         }
-        else if (name >= DrinkName.Chardonnay && name <= DrinkName.SauvignonBlanc)
+        else if (drinkName >= DrinkName.Chardonnay && drinkName <= DrinkName.SauvignonBlanc)
         {
             return DrinkType.Fermented;
         }
-        else if (name >= DrinkName.SweetAndSour && name <= DrinkName.RaspberrSyrup)
+        else if (drinkName >= DrinkName.SweetAndSour && drinkName <= DrinkName.RaspberrSyrup)
         {
             return DrinkType.Syrup;
         }
-        else if (name == DrinkName.PinaColadaMix)
+        else if (drinkName == DrinkName.PinaColadaMix)
         {
             return DrinkType.Mix;
         }
-        else if (name >= DrinkName.LemonJuice && name <= DrinkName.GingerAle)
+        else if (drinkName >= DrinkName.LemonJuice && drinkName <= DrinkName.GingerAle)
         {
             return DrinkType.Juice;
         }
-        else if (name >= DrinkName.Salt && name <= DrinkName.PowderedSugar)
+        else if (drinkName >= DrinkName.Salt && drinkName <= DrinkName.PowderedSugar)
         {
             return DrinkType.Seasoning;
         }
@@ -199,7 +199,7 @@ public class Drop : MonoBehaviour
     /// </summary>
     /// <param name="name"></param>
     /// <returns></returns>
-    public int WhatIsProof(DrinkName name)
+    public int WhatIsProof(DrinkName drinkName)
     {
         return 0;
     }
@@ -209,7 +209,7 @@ public class Drop : MonoBehaviour
     /// </summary>
     /// <param name="name"></param>
     /// <returns></returns>
-    public int WhatIsWeight(DrinkName name)
+    public int WhatIsWeight(DrinkName drinkName)
     {
         return 0;
     }

@@ -6,7 +6,7 @@ public enum TechnicType { Build, Float };
 public class GlassCol : MonoBehaviour
 {
     [SerializeField]
-    private MakeGlass glass = null;
+    private VesselGlass glass = null;
     [SerializeField]
     private TechnicType type;
     // Start is called before the first frame update

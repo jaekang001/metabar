@@ -129,9 +129,9 @@ MonoBehaviour:
   lastPoint: {x: 0, y: 0}
   dragDistance: 1
   colObjects: []
-  type: 4
+  type: 5
   sceneCtrl: {fileID: 0}
-  name: 25
+  drinkName: 25
 --- !u!50 &7319259964480043939
 Rigidbody2D:
   serializedVersion: 4

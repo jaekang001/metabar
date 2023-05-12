@@ -9,11 +9,11 @@ public class TableDrink : TableObject
     private ProtoSceneCtrl sceneCtrl;
 
     [SerializeField]
-    private DrinkName name = DrinkName.Vodka;
+    private DrinkName drinkName = DrinkName.Vodka;
 
     private void Save()
     {
-        PlayerPrefs.SetInt("DrinkName",((int)name));
+        PlayerPrefs.SetInt("DrinkName",((int)drinkName));
     }
     // Start is called before the first frame update
     void Start()
@@ -39,7 +39,7 @@ public class TableDrink : TableObject
         if(IsGlassDrop())
         {
             Save();
-            sceneCtrl.LoadScene(4);
+            sceneCtrl.LoadScene("PouringScene");
         }
         //
     }

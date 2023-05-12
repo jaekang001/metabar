@@ -3,36 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// 조주씬의 Glass용 컴포넌트
+/// 담는 용기 글래스 전용 컴포넌트
 /// </summary>
-public class MakeGlass : Glass
+[RequireComponent(typeof(Glass))]
+public class VesselGlass : Vessel
 {
+    [SerializeField]
+    private Glass glass;
+
+
     /// <summary>
     /// 플로팅 메서드
     /// </summary>
     /// <param name="drop"></param>
     public void Float(Drop drop)
     {
-        if (Amount <= capacity)
+        if (glass.Amount <= glass.MaxCapacity)
         {
-            if (liquidList.Count > 0)
+            if (glass.HasLiquid)
             {
-                if (liquidList[liquidList.Count -1].IsFloatable(drop.Name))
+                if (glass.IsFloatable(drop.Name))
                 {
                     //플로팅 가능
-                    liquidList.Add(new Liquid(0.5f, drop.Name));
+                    glass.FloatingLiquid(0.5f, drop.Name);
                 }
                 else
                 {
                     //플로팅 불가능
-                    liquidList[liquidList.Count - 1].AddDrink(0.5f, drop.Name);
+                    glass.MixingLiquid(0.5f,drop.Name);
                 }
             }
             else
             {
-                liquidList.Add(new Liquid(0.5f, drop.Name));
+                glass.FloatingLiquid(0.5f, drop.Name);
             }
-            SetDrinkSprite();
+            glass.SetDrinkSprite();
         }
         GameObject.Destroy(drop.gameObject);
     }
@@ -42,17 +47,17 @@ public class MakeGlass : Glass
     /// <param name="drop"></param>
     public void Build(Drop drop)
     {
-        if (Amount <= capacity)
+        if (glass.Amount <= glass.MaxCapacity)
         {
-            if(liquidList.Count > 0)
+            if (glass.HasLiquid)
             {
-                liquidList[liquidList.Count - 1].AddDrink(0.5f, drop.Name);
+                glass.MixingLiquid(0.5f, drop.Name);
             }
             else
             {
-                liquidList.Add(new Liquid(0.5f, drop.Name));
+                glass.FloatingLiquid(0.5f, drop.Name);
             }
-            SetDrinkSprite();
+            glass.SetDrinkSprite();
         }
         GameObject.Destroy(drop.gameObject);
     }

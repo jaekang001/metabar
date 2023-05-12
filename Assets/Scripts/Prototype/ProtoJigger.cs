@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProtoJigger : MonoBehaviour
+[RequireComponent(typeof(Jigger))]
+public class ProtoJigger : Vessel
 {
     [SerializeField]
     private SpriteRenderer jiggerSprite = null;

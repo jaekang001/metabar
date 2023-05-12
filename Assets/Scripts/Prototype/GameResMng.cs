@@ -102,4 +102,14 @@ public class GameResMng : MonoBehaviour
         }
         return null;
     }
+
+    public Sprite GetSpriteByDrinkName(DrinkName drinkName)
+    {
+        string name = GetSpriteNameByDrinkName(drinkName);
+        foreach (Sprite sprite in sprites)
+        {
+            if (sprite.name == name) return sprite;
+        }
+        return null;
+    }
 }

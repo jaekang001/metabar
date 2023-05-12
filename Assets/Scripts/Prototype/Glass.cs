@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
-/// 칵테일잔 컴포넌트
+/// 칵테일잔 정보 관리 컴포넌트
 /// </summary>
 public class Glass : MonoBehaviour
 {
@@ -29,6 +30,44 @@ public class Glass : MonoBehaviour
         }
     }
 
+    public float MaxCapacity
+    {
+        get
+        {
+            return capacity;
+        }
+    }
+
+    /// <summary>
+    /// 잔 안에 Liquid가 존재하는지 반환
+    /// </summary>
+    public bool HasLiquid
+    {
+        get
+        {
+            return liquidList.Count > 0;
+        }
+    }
+
+    public bool IsFloatable(DrinkName dropname)
+    {
+        return liquidList [liquidList.Count - 1].IsFloatable(dropname);
+    }
+
+
+    public void FloatingLiquid(float amount,DrinkName drinkName)
+    {
+        liquidList.Add(new Liquid(amount,drinkName));
+    }
+
+    public void MixingLiquid(float amount, DrinkName drinkName)
+    {
+        liquidList[liquidList.Count - 1].MixDrink(amount, drinkName);
+    }
+
+    /// <summary>
+    /// 씬 전환시 내용물 정보 로드
+    /// </summary>
     protected void Load()
     {
         liquidList.Clear();
@@ -61,6 +100,9 @@ public class Glass : MonoBehaviour
         SetDrinkSprite();
     }
 
+    /// <summary>
+    /// 씬 전환시 내용물 정보 저장
+    /// </summary>
     protected void Save()
     {
         PlayerPrefs.SetInt("LiquidCount", liquidList.Count);
@@ -95,6 +137,9 @@ public class Glass : MonoBehaviour
         Save();
     }
 
+    /// <summary>
+    /// 내용물 스프라이트 세팅
+    /// </summary>
     public void SetDrinkSprite()
     {
         try
@@ -135,6 +180,11 @@ public class Glass : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 내용물 위치 스왑
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
     public void SwapDrink(int a, int b)
     {
         float aCap = liquidSprite.material.GetFloat("_Cutoff" + a.ToString());
@@ -148,6 +198,11 @@ public class Glass : MonoBehaviour
     }
 }
 
+public enum LiquidState{
+    Unmixed,
+    Mixed
+}
+
 /// <summary>
 /// 액체 정보 클래스
 /// </summary>
@@ -157,6 +212,7 @@ public class Liquid
     private float weight = 0;
     private UnityEngine.Color color;
     private List<DrinkName> drinkTags = new List<DrinkName>();
+    private LiquidState liquidState = LiquidState.Unmixed;
 
     public Liquid(float amount, DrinkName drinkName)
     {
@@ -191,8 +247,21 @@ public class Liquid
         get { return drinkTags; }
     }
 
-    public void AddDrink(float amount, DrinkName drinkName)
+    public bool HasDrinkName(DrinkName FindName)
     {
+        foreach (DrinkName drinkName in DrinkTags)
+        {
+            if(drinkName == FindName)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void MixDrink(float amount, DrinkName drinkName)
+    {
+        
         float weight = GameResMng.Instance.GetDrinkWeightByDrinkName(drinkName);
         UnityEngine.Color color = GameResMng.Instance.GetDrinkColorByDrinkName(drinkName);
 
@@ -205,7 +274,11 @@ public class Liquid
         this.color = UnityEngine.Color.Lerp(this.color, color, newAmountRatio);
 
         this.amount += amount;
-        this.drinkTags.Add(drinkName);
+        if (!HasDrinkName(drinkName))
+        {
+            liquidState = LiquidState.Mixed;
+            this.drinkTags.Add(drinkName);
+        }
     }
 
     /// <summary>

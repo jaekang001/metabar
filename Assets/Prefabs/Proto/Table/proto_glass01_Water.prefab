@@ -215,7 +215,7 @@ MonoBehaviour:
   lastPoint: {x: 0, y: 0}
   dragDistance: 1
   colObjects: []
-  type: 3
+  type: 4
 --- !u!50 &-5647023844054734954
 Rigidbody2D:
   serializedVersion: 4
