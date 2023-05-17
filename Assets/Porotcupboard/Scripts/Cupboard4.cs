@@ -36,7 +36,7 @@ public class Cupboard4 : MonoBehaviour
                     }
                     else
                     {
-                        if (selectCup4.gameObject == hit.collider.gameObject)
+                          if (selectCup4.gameObject == hit.collider.gameObject)
                         {
                             hit.collider.transform.GetChild(0).gameObject.SetActive(false);
                             //hit.collider.transform.GetChild(1).gameObject.SetActive(false);
@@ -45,8 +45,6 @@ public class Cupboard4 : MonoBehaviour
                         }
                         else
                         {
-                            selectCup4.transform.GetChild(0).gameObject.SetActive(false);
-                            //selectCup.transform.GetChild(1).gameObject.SetActive(false);
                             hit.collider.transform.GetChild(0).gameObject.SetActive(true);
                             //hit.collider.transform.GetChild(1).gameObject.SetActive(true);
                             selectCup4 = hit.collider.gameObject;

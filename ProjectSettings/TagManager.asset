@@ -9,6 +9,7 @@ TagManager:
   - cupboard1
   - cupboard2
   - cupboard3
+  - cupboard4
   layers:
   - Default
   - TransparentFX
