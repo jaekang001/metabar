@@ -27,13 +27,16 @@ public class randomtext : MonoBehaviour
             switch (i)
             {
                 case 0:
-                    name1.text = name;
+                    name1.text = "A. "+name;
+                    
                     break;
                 case 1:
-                    name2.text = name;
+                    name2.text = "B. "+name;
+                    
                     break;
                 case 2:
-                    name3.text = name;
+                    name3.text = "C. "+name;
+                    
                     break;
             }
         }
