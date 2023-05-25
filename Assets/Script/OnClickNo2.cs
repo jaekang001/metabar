@@ -5,12 +5,9 @@ using UnityEngine;
 public class OnClickNo2 : MonoBehaviour
 {
 
-    public GameObject button;
-
-
-    public void addScore()
+    public void pushNo2()
     {
-        GameScore.value = GameScore.value + 100;
+        GameObject.Find("EventManager").GetComponent<GameScore>().check(2);
     }
 
     // Start is called before the first frame update
