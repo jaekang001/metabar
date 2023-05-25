@@ -8,6 +8,7 @@ TagManager:
   - Tool
   - Drink
   - Glass
+  - IcePaill
   layers:
   - Default
   - TransparentFX
