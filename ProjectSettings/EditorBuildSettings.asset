@@ -5,7 +5,31 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/mainmenu.unity
+    guid: 9c810e4d6c1aa914aac6971ab7933ff5
+  - enabled: 1
+    path: Assets/Scenes/craftdictionary.unity
+    guid: a3a6d13d25f72694e84b1bb82dbb43c0
+  - enabled: 1
+    path: Assets/Scenes/craftdictionary1.unity
+    guid: 482187b00d86c6e4bbc69fcb2c22f64e
+  - enabled: 1
+    path: Assets/Scenes/craftdictionary2.unity
+    guid: cefde09ef3dcd634086b0c79f0c95395
+  - enabled: 1
+    path: Assets/Scenes/writingtest.unity
+    guid: 2ac116973047ec1438d93f8749f261b7
+  - enabled: 1
+    path: Assets/Scenes/selectmode.unity
+    guid: 1ec225891698eb14abc35537d0068f51
+  - enabled: 0
+    path: Assets/Scenes/Practical.unity
+    guid: d002fbf797cbb8a44af750a7b72ebaaa
+  - enabled: 1
+    path: Assets/Scenes/scene11.unity
+    guid: a84a2f23ce768614590b94323c8d93c2
   m_configObjects: {}
